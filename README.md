@@ -17,7 +17,7 @@ desarrollados como parte de retos técnicos y práctica personal.
 
 ## 🚀 Cómo ejecutar el proyecto
 Ver instrucciones específicas en:
-- [`/e2e/README.md`](e2e/README.md)
+- [`/ejercicio1-e2e/README.md`](e2e/README.md)
 - [`/api/README.md`](api/README.md)
 
 ## 📌 Notas
