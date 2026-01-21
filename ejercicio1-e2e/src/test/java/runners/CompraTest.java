@@ -10,5 +10,6 @@ import org.junit.runner.RunWith;
         glue = "steps",
         plugin = {"pretty"}
 )
-public class CompraRunner {
+public class CompraTest {
 }
+
