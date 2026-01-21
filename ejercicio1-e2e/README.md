@@ -14,20 +14,24 @@ Verifica las versiones con:
 java -version
 mvn -version
 git --version
+```
 
 ## 📥 Clonar el repositorio
 
-1. Clona el repositorio desde GitHub:
+ - Clona el repositorio desde GitHub:
 ```bash
 git clone https://github.com/CarlosAlejo/qa-automation-saucedemo-demoblaze.git
-2. Ingresa al directorio del proyecto E2E:
+```
+- Ingresa al directorio del proyecto E2E:
 ```bash
 cd qa-automation-saucedemo-demoblaze/ejercicio1-e2e
+```
 
 ## ▶️ Ejecutar las pruebas automatizadas
 Una vez dentro del directorio ejercicio1-e2e, ejecuta el siguiente comando:
 ```bash
 mvn clean verify
+```
 Este comando:
 
  - Compila el proyecto
@@ -38,3 +42,4 @@ Este comando:
 - Al finalizar la ejecución, abre el reporte en tu navegador:
 ```bash
 target/site/serenity/index.html
+```
