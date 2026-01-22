@@ -14,7 +14,7 @@ desarrollados como parte de retos técnicos y práctica personal.
 - `/e2e`: pruebas end-to-end
 - `/api`: pruebas de API
 - `/k6` : pruebas de carga del API
-- `/docs`: documentación y conclusiones
+- `/docs`: informe 
 
 ## 🚀 Cómo ejecutar el proyecto
 Ver instrucciones específicas en:
