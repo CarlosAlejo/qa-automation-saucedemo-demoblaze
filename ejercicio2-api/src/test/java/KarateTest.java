@@ -1,4 +1,9 @@
-package PACKAGE_NAME;
+import com.intuit.karate.junit5.Karate;
 
-public class KarateTest {
+class KarateTest {
+
+    @Karate.Test
+    Karate testAll() {
+        return Karate.run().relativeTo(getClass());
+    }
 }

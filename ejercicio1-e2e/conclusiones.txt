@@ -1,0 +1,23 @@
+CONCLUSIONES
+
+La implementación de la prueba funcional automatizada E2E sobre la plataforma https://www.saucedemo.com
+permitió validar de forma integral el flujo de compra de un usuario, desde la autenticación hasta la
+confirmación final del pedido.
+
+Durante el desarrollo del proyecto se logró:
+
+- Automatizar el inicio de sesión utilizando credenciales válidas.
+- Simular la selección y agregado de múltiples productos al carrito de compras.
+- Validar la visualización correcta del carrito antes de continuar con la compra.
+- Completar el formulario de checkout con diferentes datos de usuario.
+- Confirmar exitosamente la compra mediante el mensaje final:
+  “THANK YOU FOR YOUR ORDER”.
+
+El uso de Serenity BDD con Cucumber facilitó la escritura de escenarios en lenguaje natural (Gherkin),
+mejorando la legibilidad de las pruebas y permitiendo una mejor comunicación entre perfiles técnicos
+y no técnicos. Asimismo, la generación automática de reportes proporciona una visión clara del estado
+de las pruebas, evidenciando resultados, errores y pasos ejecutados.
+
+Finalmente, esta automatización demuestra cómo las pruebas E2E contribuyen a asegurar la calidad del
+software, reduciendo riesgos en producción y permitiendo detectar fallos críticos del negocio de forma
+temprana.

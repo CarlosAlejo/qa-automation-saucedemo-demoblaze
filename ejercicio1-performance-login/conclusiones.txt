@@ -1,0 +1,12 @@
+CONCLUSIONES PRUEBA DE CARGA LOGIN
+
+1. El servicio soporta una carga constante de 20 TPS durante 1 minuto sin degradación significativa.
+2. El percentil 95 del tiempo de respuesta se mantuvo por debajo de 1.5 segundos.
+3. La tasa de error fue inferior al 3%, cumpliendo el criterio de aceptación.
+4. No se evidenciaron errores de timeout ni rechazos masivos.
+5. El uso de datos parametrizados evitó cacheo y simuló tráfico real.
+
+Recomendaciones:
+- Ejecutar pruebas de estrés incrementando TPS.
+- Analizar consumo de recursos del backend.
+- Implementar pruebas continuas en pipeline CI/CD.
