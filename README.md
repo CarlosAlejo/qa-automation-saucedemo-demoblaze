@@ -11,9 +11,9 @@ desarrollados como parte de retos técnicos y práctica personal.
 - Git & GitHub
 
 ## 📁 Estructura del proyecto
-- `/e2e`: pruebas end-to-end
-- `/api`: pruebas de API
-- `/k6` : pruebas de carga del API
+- `/ejercicio1-e2e`: pruebas end-to-end
+- `/ejercicio1-performance-login` : pruebas de carga del API
+- `/ejercicio2-api`: pruebas de API
 - `/docs`: informe 
 
 ## 🚀 Cómo ejecutar el proyecto
