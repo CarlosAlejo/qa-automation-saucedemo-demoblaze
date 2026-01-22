@@ -20,7 +20,8 @@ desarrollados como parte de retos técnicos y práctica personal.
 Ver instrucciones específicas en:
 - [`/ejercicio1-e2e/README.md`](ejercicio1-e2e/README.md)
 - [`/ejercicio1-performance-login/README.md`](ejercicio1-performance-login/README.md)
-- [`/api/README.md`](api/README.md)
+- [`/ejercicio2-api/README.md`](ejercicio2-api/README.md)
+- [`/docs/README.md`](docs/README.md)
 
 ## 📌 Notas
 Este repositorio sigue buenas prácticas de automatización, patrones de diseño y principios SOLID.

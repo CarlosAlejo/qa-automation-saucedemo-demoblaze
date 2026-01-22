@@ -1,89 +1,17 @@
-HALLAZGOS Y CONCLUSIONES DEL EJERCICIO
+CONCLUSIONES Y HALLAZGOS
 
-1. ANÁLISIS DE LOS SERVICIOS API:
+1. Los servicios de Signup y Login siempre retornan código HTTP 200,
+   incluso cuando ocurre un error funcional.
 
-   SERVICIO SIGNUP (https://demoblaze.com/signup):
-   - Método: POST
-   - Content-Type: application/json
-   - Body esperado: {"username": "valor", "password": "valor"}
-   - Respuestas posibles:
-     * Éxito: {"status": "success"}
-     * Error: {"status": "error", "message": "Este usuario ya existe."}
+2. Los errores se identifican únicamente en el cuerpo de la respuesta
+   mediante el campo "errorMessage".
 
-   SERVICIO LOGIN (https://demoblaze.com/login):
-   - Método: POST
-   - Content-Type: application/json
-   - Body esperado: {"username": "valor", "password": "valor"}
-   - Respuestas posibles:
-     * Éxito: {"status": "success"}
-     * Error: {"status": "error", "message": "Wrong password."}
+3. No existe diferenciación de códigos HTTP para errores como:
+   - Usuario ya existente
+   - Password incorrecto
 
-2. HALLAZGOS POR CASO DE PRUEBA:
+4. Esto puede representar un riesgo desde el punto de vista de buenas
+   prácticas REST, ya que no se usan códigos HTTP como 400 o 401.
 
-   a) Crear nuevo usuario exitoso:
-      - El servicio acepta cualquier combinación de usuario/password
-      - No hay validación de fortaleza de password
-      - Los nombres de usuario deben ser únicos
-      - Código de respuesta siempre 200 (inclusive en errores)
-
-   b) Crear usuario existente:
-      - Retorna error con mensaje específico
-      - El código HTTP sigue siendo 200 (debería ser 409 Conflict)
-      - No hay información adicional en la respuesta
-
-   c) Login con credenciales correctas:
-      - Retorna éxito inmediatamente
-      - No se proporciona token de sesión ni cookie
-      - Parece ser solo una verificación básica
-
-   d) Login con credenciales incorrectas:
-      - Mensaje de error genérico "Wrong password"
-      - No diferencia entre usuario inexistente y password incorrecto
-      - Posible vulnerabilidad de enumeración de usuarios
-
-3. PROBLEMAS IDENTIFICADOS:
-
-   a) Seguridad:
-      - Códigos HTTP siempre 200 (mala práctica)
-      - Mensajes de error pueden revelar información
-      - No hay rate limiting visible
-      - No se implementa HTTPS correctamente (mixed content)
-
-   b) Diseño API:
-      - Respuestas inconsistentes en formato
-      - Falta de códigos HTTP apropiados
-      - No hay versionado de API
-      - Documentación inexistente
-
-   c) Validaciones:
-      - No hay requisitos mínimos para passwords
-      - No se verifica formato de usuario
-      - No hay confirmación de email
-
-4. RECOMENDACIONES:
-
-   1. Mejorar códigos de respuesta HTTP:
-      - 201 Created para registro exitoso
-      - 409 Conflict para usuario existente
-      - 401 Unauthorized para login fallido
-
-   2. Fortalecer seguridad:
-      - Implementar rate limiting
-      - Mejorar mensajes de error
-      - Agregar validación de passwords
-      - Implementar confirmación por email
-
-   3. Mejorar diseño REST:
-      - Documentar endpoints
-      - Versionar API
-      - Establecer estándares de respuesta
-
-5. CONCLUSIÓN GENERAL:
-
-   Los servicios de Demoblaze funcionan pero carecen de mejores prácticas
-   de desarrollo de APIs REST. Son susceptibles a ataques básicos y no
-   siguen estándares HTTP apropiados. Para un ambiente productivo, se
-   requieren mejoras significativas en seguridad y diseño.
-
-   Las pruebas automatizadas con Karate demostraron ser efectivas para
-   validar el comportamiento actual y documentar las deficiencias encontradas.
+5. Karate DSL permitió una implementación clara, legible y rápida
+   de las pruebas de servicios REST.
