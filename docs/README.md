@@ -24,9 +24,9 @@ Establecer métricas de rendimiento de referencia
  Categoría   | Métrica                  | Valor             | Estado        
 -------------|--------------------------|-------------------|---------------
  Rendimiento | Tasa de éxito            | 97.55%            | ✅Aceptable  
-             | VUs máximos              | 140               | ✅ Alcanzado
-             | Throughput pico          | 82.6 req/s        | ✅ Alcanzado       
+&nbsp;       | VUs máximos              | 140               | ✅ Alcanzado
+&nbsp;       | Throughput pico          | 82.6 req/s        | ✅ Alcanzado       
  Calidad     | Tiempo respuesta (p95)   | 1.57 segundos     |⚠️ Necesita mejora
-             | Variabilidad             | 191ms - 29.93s    |⚠️ Inconsistente      
+&nbsp;       | Variabilidad             | 191ms - 29.93s    |⚠️ Inconsistente      
  Estabilidad | Errores 5xx              | 5,987 (2.16%)     | ❌ Crítico
-             | Tasa de fallo total      | 2.44%             | ❌ Elevada                                        
+&nbsp;       | Tasa de fallo total      | 2.44%             | ❌ Elevada                                        
